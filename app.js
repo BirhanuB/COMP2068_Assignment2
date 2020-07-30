@@ -6,7 +6,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+const MongoClient = require('mongodb').MongoClient;
+var mongoose = require('mongoose');
+const uri = "mongodb+srv://root:p7QAh5rRjBIeeKgq@cluster0.5gxho.mongodb.net/classifieds?retryWrites=true&w=majority";
+//connect to the database
+try {
+    mongoose.connect(uri, { useNewUrlParser: true });
+    var db = mongoose.connection;
+    db.on('error', function (err) {
+        console.log(err);
+    });
+    db.once('open', function (callback) {
+        console.log('Connected to MongoDB');
+    });
+} catch (err) {
+    console.log("Error : " + err);
+}
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
