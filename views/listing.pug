@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  a(href="/insert") Post
+  hr
+  // Check for items passed from the server
+  if (items && items.length)
+    table
+        thead
+            th(style='width:100px') Title
+            th(style='width:450px') Description
+            th(style='width:100px') Price
+            th(style='width:100px') 
+            th(style='width:100px')
+        tr
+        tbody
+            // If items are found, create a row and column for each item
+            each item in items
+                tr
+                    td= item.title
+                    td= item.description
+                    // Quick currency format for price $nn,nnn.nn
+                    td= '$'+(item.price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+                    td 
+                        a(href='/edit/'+item.id) 
+                            button(type='submit' style='padding: 0 28px') Edit
+                    td
+                        form(method='POST' action='/delete/'+item.id)
+                            button(type='submit' style='padding: 0 14px') Delete
+  else
+    h1 No Items Found!

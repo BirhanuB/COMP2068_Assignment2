@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    p.  
+        Thank you for using Merkato.
+    p.
+        For technical support or feedback, please fill out 
+        the form below:
+    form(method='POST' action='/contact')
+        div
+            p Full name: 
+                input(type='text' name='name' placeholder='Full name' size='40' required)
+        div            
+            p Email: 
+                input(type='email' name='email' placeholder='Email' size='44' required)
+        div
+            p Question/feedback: 
+            textarea(name='comment' rows='4' cols='52' required)
+        div
+            button(type='reset' value='Reset' style='padding: 0 24px') Reset 
+            button(type='submit' id='subm' value='Submit' style='padding: 0 14px') Submit

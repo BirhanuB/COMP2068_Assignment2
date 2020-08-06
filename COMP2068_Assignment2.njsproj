@@ -30,13 +30,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="models\inquiries.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\items.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\images\background.jpg" />
+    <Content Include="public\images\cover.jpg" />
     <Content Include="routes\index.js" />
     <Content Include="routes\users.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="views\contact.pug" />
+    <Content Include="views\edit.pug" />
     <Content Include="views\index.pug" />
+    <Content Include="views\insert.pug" />
+    <Content Include="views\listing.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
     <Content Include="views\partials\footer.pug">
@@ -47,6 +58,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="models\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
