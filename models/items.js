@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Create ItemSchema
+// Create items schema
 const ItemSchema = new mongoose.Schema({
     title: {
         type: String,

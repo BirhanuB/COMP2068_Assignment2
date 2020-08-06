@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-//Create Schema
+
+// Create inquiries schema
 const InquiriesSchema = new mongoose.Schema({
     name: {
         type: String,

@@ -10,6 +10,10 @@ a#ig {
 
 a {
     color: #00B7FF;
-    font-size: calc(1.5vw + 0.5rem);
+    font-size: 1.2rem;
     font-weight: bold;
+}
+
+h6 {
+    color: maroon;
 }

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  if(!user)
+      h6 Login below, OR
+        a(id="ig" href="/register")
+            button(type='submit' style='padding: 2px 20px; margin-left: 8px') Register
+      hr
+      form(method='POST' action='/login')
+        div
+            p User name: 
+                input(type='text' name='username' placeholder='User name' size='44' required)
+        div            
+            p Password: 
+                input#password(type='password' name='password' placeholder='Password' size='45' required)
+        div
+            button(type='submit' value='Submit' style='padding: 0 18px') Login
+  else
+      h6 You are logged in!
+        a(id="ig" href="/logout")
+            button(type='submit' style='padding: 2px 20px; margin-left: 8px') Logout

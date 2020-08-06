@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h6 Register
+  hr
+  form(method='POST' action='/register')
+    div
+        p User name: 
+            input(type='text' name='username' placeholder='User name' size='44' required)
+    div            
+        p First name: 
+            input(type='text' name='firstname' placeholder='First name' size='44' required)
+    div           
+        p Last name: 
+            input(type='text' name='lastname' placeholder='Last name' size='44' required)
+    div           
+        p Email address: 
+            input(type='email' name='email' placeholder='Email address' size='41' required)
+    div           
+        p Password: 
+            input#password(type='password' name='password' placeholder='Password' size='45' required)
+    div
+        button(type='submit' value='Submit' style='padding: 0 18px') Register
