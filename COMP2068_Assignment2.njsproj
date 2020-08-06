@@ -44,6 +44,7 @@
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
     <Content Include="views\contact.pug" />
+    <Content Include="views\view.pug" />
     <Content Include="views\edit.pug" />
     <Content Include="views\index.pug" />
     <Content Include="views\insert.pug" />

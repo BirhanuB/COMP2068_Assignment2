@@ -1,15 +1,16 @@
 extends layout
 
 block content
-  a(href="/insert") Post
+  a(id="ig" href="/insert") 
+      button(type='submit' style='padding: 0 28px') Post
   hr
   // Check for items passed from the server
   if (items && items.length)
     table
         thead
-            th(style='width:100px') Title
-            th(style='width:450px') Description
-            th(style='width:100px') Price
+            th(style='width:100px; color: darkviolet') Title
+            th(style='width:450px; color: darkviolet') Description
+            th(style='width:100px; color: darkviolet') Price
             th(style='width:100px') 
             th(style='width:100px')
         tr
@@ -22,10 +23,10 @@ block content
                     // Quick currency format for price $nn,nnn.nn
                     td= '$'+(item.price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
                     td 
-                        a(href='/edit/'+item.id) 
+                        a(id="ig" href='/edit/'+item.id) 
                             button(type='submit' style='padding: 0 28px') Edit
                     td
                         form(method='POST' action='/delete/'+item.id)
-                            button(type='submit' style='padding: 0 14px') Delete
+                            button(type='submit' style='padding: 0 14px' onclick="confirm('Are you sure?')") Delete
   else
-    h1 No Items Found!
+    h4 No items for now. Be the first to post!

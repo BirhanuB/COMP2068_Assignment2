@@ -77,8 +77,13 @@ router.post('/contact', function (req, res) {
     // Insert the inquiry into DB and redirect to home page
     inquiry.save(function (err) {
         console.log(err);
-        res.redirect('/');
+        res.redirect('/view');
     });
+});
+
+/* GET view message page. */
+router.get('/view', function (req, res) {
+    res.render('view');
 });
 
 module.exports = router;

@@ -4,6 +4,12 @@ body {
     background-image: url(../images/background.jpg);
 }
 
+a#ig {
+    font-size: inherit;
+}
+
 a {
     color: #00B7FF;
+    font-size: calc(1.5vw + 0.5rem);
+    font-weight: bold;
 }
