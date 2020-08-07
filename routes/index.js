@@ -136,7 +136,7 @@ router.get('/contact', function (req, res) {
 /* POST contact me page. */
 router.post('/contact', function (req, res) {
     const inquiry = new inquiriesModel({ name: req.body.name, email: req.body.email, comment: req.body.comment });
-    // Insert the inquiry into DB and redirect to home page
+    // Insert the inquiry into DB and redirect to acknowledgement page
     inquiry.save(function (err) {
         console.log(err);
         res.redirect('/view');

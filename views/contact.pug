@@ -11,6 +11,7 @@ block content
             the form below:
         form(method='POST' action='/contact')
             div
+                // Populate the fields for the user so there's no need of entering again
                 p User name: 
                     input(type='text' name='name' value=user.username placeholder='Full name' size='45' required)
             div            
@@ -20,7 +21,7 @@ block content
                 p Question/feedback: 
                 textarea(name='comment' rows='4' cols='58' required)
             div
-                button(type='reset' value='Reset' style='padding: 0 24px; margin-right: 8px') Reset    
+                button(type='reset' value='Reset' style='padding: 0 24px; margin: 8px 18px 0 0') Reset    
                 button(type='submit' id='subm' value='Submit' style='padding: 0 18px') Submit
     else
         h6 Thank you for using Merkato!
@@ -39,5 +40,5 @@ block content
                 p Question/feedback: 
                 textarea(name='comment' rows='4' cols='58' required)
             div
-                button(type='reset' value='Reset' style='padding: 0 24px; margin-right: 8px') Reset    
+                button(type='reset' value='Reset' style='padding: 0 24px; margin: 8px 18px 0 0') Reset    
                 button(type='submit' id='subm' value='Submit' style='padding: 0 18px') Submit
